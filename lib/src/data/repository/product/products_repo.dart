@@ -5,7 +5,7 @@ import '../../models/index.dart';
 class ProductsRepository extends BaseProducts {
   ProductsRepository(Dio dio) : _dio = dio;
   final Dio _dio;
-  static const _products = '/products';
+  static const _products = '/admin/products';
 
   /// Retrieves a list of products
   @override
