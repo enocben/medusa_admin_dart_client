@@ -63,7 +63,7 @@ class ProductsRepository extends BaseProducts {
         _dio.options.headers.addAll(customHeaders);
       }
       final response =
-          await _dio.get('/variants', queryParameters: queryParameters);
+          await _dio.get('/admin/product-variants', queryParameters: queryParameters);
       if (response.statusCode == 200) {
         return List<ProductVariant>.from(
             response.data['variants'].map((i) => ProductVariant.fromJson(i)));

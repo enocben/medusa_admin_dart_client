@@ -13,8 +13,8 @@ abstract class BaseProducts {
       {Map<String, dynamic>? customHeaders,
       Map<String, dynamic>? queryParameters});
 
-  Future<PostSearchRes?> search(
-      {PostSearchReq? req, Map<String, dynamic>? customHeaders});
+  /*Future<PostSearchRes?> search(
+      {PostSearchReq? req, Map<String, dynamic>? customHeaders});*/
 
   Future<Product?> add(
       {required PostProductReq userPostProductReq,
