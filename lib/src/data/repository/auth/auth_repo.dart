@@ -104,7 +104,7 @@ class AuthRepository extends BaseAuth {
       if (customHeaders != null) {
         _dio.options.headers.addAll(customHeaders);
       }
-      final response = await _dio.get(_auth);
+      final response = await _dio.get("/admin/users/me");
       if (response.statusCode == 200) {
         return User.fromJson(response.data['user']);
       } else {
