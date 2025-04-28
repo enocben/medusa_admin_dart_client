@@ -39,9 +39,9 @@ class AuthRepository extends BaseAuth {
     }
     _dio.options.connectTimeout = const Duration(seconds: 10);
     try {
-      final response = await _dio.post('$_auth/token', data: req);
+      final response = await _dio.post('$_auth/user/emailpass', data: req);
       if (response.statusCode == 200) {
-        return response.data['access_token'];
+        return response.data['token'];
       } else {
         throw response;
       }
